@@ -22,3 +22,12 @@ ul {
   list-style: none;
   border: 1.5px solid #848BB2;
 }
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-form button {
+  color: red;
+}

@@ -13,6 +13,7 @@ module.exports = {
     getOne,
     create,
     deleteOne,
+    update,
 };
 
 function getAll() {
@@ -27,10 +28,15 @@ function create(skill) {
     skill.id = skills.length;
     skill.learned = false;
     skills.push(skill);
-    console.log(skills);
 }
 
 function deleteOne(id) {
     const idx = skills.findIndex(skill => skill.id === parseInt(id));
     skills.splice(idx, 1);
+}
+
+// could use siome clarity on this function
+function update(id, skill) {
+    const skillObj = skills.find(skill => skill.id === parseInt(id));
+    Object.assign(skillObj, skill);
 }

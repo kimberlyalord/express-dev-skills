@@ -42,7 +42,7 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-    req.body.done = req.body.done === 'on';
+    req.body.learned = req.body.learned === 'on';
     skillDB.update(req.params.id, req.body);
     res.redirect(`/skills/${req.params.id}`);
 }
